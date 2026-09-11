@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symmetry & Mandala Canvas Art Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-container">
+    <div class="app-header">
+        <h1>Symmetry & Mandala Canvas Art Tool</h1>
+        <p>Create, Design, and Export High-Resolution Radial Symmetry Artwork</p>
+    </div>
+
+    <div class="controls-section">
+        <div class="control-row">
+            <div class="control-group">
+                <label>1. Drawing Effect / Line Style</label>
+                <select id="lineStyle">
+                    <option value="normal">Normal Solid Line</option>
+                    <option value="dotted">Dotted Line</option>
+                    <option value="dashed">Dashed Line</option>
+                    <option value="double">Double Parallel Line</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label>2. Symmetry Points</label>
+                <select id="symmetryPoints">
+                    <option value="2">2 Points Symmetry</option>
+                    <option value="4">4 Points Symmetry</option>
+                    <option value="6">6 Points Symmetry</option>
+                    <option value="8" selected>8 Points Symmetry</option>
+                    <option value="12">12 Points Symmetry</option>
+                    <option value="16">16 Points Symmetry</option>
+                    <option value="24">24 Points Symmetry</option>
+                    <option value="32">32 Points Symmetry</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="control-row">
+            <div class="control-group">
+                <label>3. Color Mode & Neon Effects</label>
+                <select id="colorMode">
+                    <option value="solid">Custom Solid Color</option>
+                    <option value="neon">Neon Glow Effect</option>
+                    <option value="rainbow">Dynamic Rainbow Flow</option>
+                </select>
+            </div>
+            <div class="control-group" id="solidColorGroup">
+                <label>Pick Brush Color</label>
+                <input type="color" id="brushColor" value="#00e5ff">
+            </div>
+        </div>
+
+        <div class="control-row">
+            <div class="control-group">
+                <label>4. Canvas Theme</label>
+                <select id="canvasTheme">
+                    <option value="#000000">Black Theme</option>
+                    <option value="#ffffff">White Theme</option>
+                    <option value="#111f36">Deep Blue Theme</option>
+                    <option value="#1e1e1e">Dark Gray Theme</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label>5. Export Resolution</label>
+                <select id="exportResolution">
+                    <option value="800">Standard Resolution (800 px)</option>
+                    <option value="1920">Full HD (1920 px)</option>
+                    <option value="2560">2K Resolution (2560 px)</option>
+                    <option value="3840" selected>4K Ultra HD (3840 px)</option>
+                    <option value="7680">8K Ultra HD (7680 px)</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="control-row">
+            <div class="control-group full-width" style="grid-column: span 2;">
+                <label>Brush Thickness (<span id="sizeVal">3</span>px)</label>
+                <div class="range-container">
+                    <input type="range" id="brushSize" min="1" max="40" value="3">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="canvas-container">
+        <canvas id="artCanvas" width="450" height="450"></canvas>
+    </div>
+
+    <div class="actions-row">
+        <button class="btn btn-undo" id="undoBtn">Undo</button>
+        <button class="btn btn-clear" id="clearBtn">Clear Canvas</button>
+        <button class="btn btn-download" id="downloadBtn">Download Artwork</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
