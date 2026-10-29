@@ -26,11 +26,11 @@ body {
     border-radius: 5px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     overflow: hidden;
-    border: 1.5px solid var(--border-color);
+    border: 1.5px solid #1565c0;
 }
 
 .app-header {
-    background-color: var(--primary-color);
+    background-color: #1565c0;
     color: white;
     padding: 20px;
     text-align: center;
@@ -110,13 +110,13 @@ input[type="range"] {
 .canvas-container {
     display: flex;
     justify-content: center;
-    padding: 10px 20px;
+    padding: 0px 0px;
     background: #f1f3f4;
 }
 
 canvas {
     background: #000;
-    border-radius: 8px;
+    border-radius: 0px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     cursor: crosshair;
     max-width: 100%;
